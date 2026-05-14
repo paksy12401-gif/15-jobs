@@ -1,19 +1,83 @@
-<html> 
-    <head>
-        <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
-        />       
-    </head>
-    <body>
-        <div class ="container">
+<!-- ==============================
+templates/index.html
+============================== -->
 
-            <h1>하이요</h1>
-            <p1>바이요
-            <form action="/search">
-            <input type="text" name="keyword" placeholder="찾으시는 검색어를 입력하세요">
-            <form>
-            </p1>
-        </div>
-    </body>
+<!doctype html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+
+    <style>
+      body {
+        background: #f3f4f6;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        max-width: 700px;
+        margin: 200px auto;
+      }
+
+      .card {
+        background: white;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 26px;
+        font-weight: 800;
+        margin-bottom: 25px;
+        color: #111;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        font-size: 14px;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        background: #111;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #333;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>실측 기반 남자 쇼핑 추천</h1>
+
+        <form action="/search">
+          <input
+            type="text"
+            name="keyword"
+            placeholder="예: 반팔, 셔츠, 맨투맨"
+            required
+          />
+
+          <button type="submit">검색</button>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>
